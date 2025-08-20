@@ -1,0 +1,181 @@
+:root {
+    --night: #0A090A;
+    --platinum: #E5E7E6;
+  }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--platinum);
+    font-family: sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#areyou {
+    margin-right: 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--night);
+}
+
+#areyou:hover {
+    text-decoration: underline;
+}
+
+#title a{
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--night);
+}
+
+#title h1 {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#counter {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+#question {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#question h2 {
+    text-align: center;
+}
+
+#message {
+    text-align: center;
+}
+
+#counter h2{
+    text-align: center;
+    font-size: 36px;
+}
+
+#counter_amount {
+    display: flex;
+    justify-content: center;
+}
+
+.digit {
+    display: inline-block;
+    width: 80px;
+    height: 100px;
+    margin: 2px;
+    background-color: var(--night);
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--night);
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer i {
+    text-decoration: underline;
+}
+
+a.button {
+    padding: 1px 6px;
+    border: 1px outset var(--night);
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    background-color: var(--night);
+}
+
+
+
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    #counter_amount {
+        display: flex;
+        align-items: flex-start;
+        height: 30px;
+    }
+
+    .digit {
+        display: inline-block;
+        width: 30px;
+        height: 50px;
+        margin: 2px;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 50px;
+        align-self: flex-start;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+
+    #counter h2{
+        font-size: 28px;
+    }
+
+    #title {
+        margin-top: 20px;
+    }
+
+    #menu {
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    #areyou {
+        margin-bottom: 20px;
+    }
+
+}

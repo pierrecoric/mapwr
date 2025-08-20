@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Good Job!</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <header>
+            <div id = "title">
+                <a href="index.html"><h1>www.misiaandpierrewereright.com</h1></a>
+            </div>
+            <div id = "menu">
+                <a href="wereyouright.html" id="areyou">are you Misia and Pierre?</a>
+                <select name="lang" id="lang">
+                  <option value="English">English</option>
+                  <option value="Spanish">Español</option>
+                  <option value="Euskera">Euskara</option>
+                  <option value="Francais">Français</option>
+                  <option value="Latin">Latin</option>
+                  <option value="Polski">Polski</option>
+                  <option value="PIE">Proto Indo European</option>
+                </select> 
+            </div>
+        </header>
+        <div id="question">
+            <h2>Obviously, good job! you did it again!</h2>
+            <p id="message">Please enter your password to record your correctness</p>
+            <div id="incrementer" style="margin-top: 20px;">
+                <input onkeydown="if (event.key === 'Enter') incrementCounter()" type="password" id="passwordInput" placeholder="password">
+                <button onclick="incrementCounter()">OK</button>
+            </div>
+        </div>
+        <script src="server.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
