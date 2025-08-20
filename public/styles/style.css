@@ -137,11 +137,10 @@ a.button {
 @media (max-width: 600px) {
     header {
         flex-direction: column;
-    }
-
-    #header {
         height: 180px;
     }
+
+   
     #counter_amount {
         display: flex;
         align-items: flex-start;
