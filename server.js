@@ -31,10 +31,21 @@ db.connect(err => {
 // API endpoint to get counter
 app.get("/api/get-counter", (req, res) => {
     db.query("SELECT amount FROM counter WHERE id = 1", (err, results) => {
-        if (err) return res.status(500).json({ error: "Database error" });
-        res.json({ amount: results[0]?.amount || 0 });
+        if (err) {
+            console.error("❌ DB query error:", err.message);
+            return res.status(500).json({ error: "Database error" });
+        }
+
+        console.log("✅ Query results:", results);
+
+        if (!results || results.length === 0) {
+            return res.status(404).json({ error: "Counter not found" });
+        }
+
+        res.json({ amount: results[0].amount });
     });
 });
+
 
 // API endpoint to set counter
 app.post("/api/set-counter", (req, res) => {
